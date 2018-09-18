@@ -21,6 +21,4 @@ public class assf
             for(int i=1; i<aa.length; i++)
                 if(aa[i]==0) System.out.printf("%d ",i);
         }
- 
- 
 }
