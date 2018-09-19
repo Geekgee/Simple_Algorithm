@@ -4,13 +4,14 @@
 //Way:  To get rid of all multiples of primes that are not greater than the square root of n, and all I'm going to get is prime.
 
 #include<iostream>
+#include<cmath>
 #include<bitset>
 
 using namespace std;
 int main()
 {
 	int const max_number(100);
-	int const max_test((int)sqrt((double)max_number));//max_number-double, sqrt-int
+	int const max_test((int)sqrt((double)max_number));//max_number-double, max_test-int，两次转型
 	//所有小于n的质数至少有个小于根号n的因数
 
 	bitset<max_number + 1>numbers;//101个0！
@@ -21,7 +22,7 @@ int main()
 	{
 		if(numbers[i])
 		{//筛掉倍数
-			for(int j = (i*i); j < max_number + 1; j += i)
+			for(int j = (i*i); j < max_number + 1; j += i)//
 			{
 				numbers[j] = 0;
 			}
